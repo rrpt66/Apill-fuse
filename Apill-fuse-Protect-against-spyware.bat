@@ -42,6 +42,7 @@ timeout 1 /nobreak
 
 
 :virus
+timeout 10 /nobreak
 echo [ Found ] Kill All BAD Port...
 
 for %%a in (
