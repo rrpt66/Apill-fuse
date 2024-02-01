@@ -131,6 +131,14 @@ for %%a in (
 64666
 65000
 65506
-) do netsh advfirewall firewall add rule name="Close Port %%a" dir=in action=allow protocol=TCP localport=%%a & goto virus
-echo x=msgbox("safety" ,0, "Protect virus is running") > Realtime.vbs 
+) do (
+netsh advfirewall firewall show rule name="Close Port %%a" > nul
+if %errorlevel% 1 (
+echo x=msgbox("stop virus" ,0, "Protect virus is running") > Realtime.vbs 
 start Realtime.vbs 
+netsh advfirewall firewall add rule name="Close Port %%a" dir=in action=allow protocol=TCP localport=%%a & goto virus
+) else (
+echo x=msgbox("safety" ,0, "Protect virus is running") > Realtime.vbs 
+start Realtime.vbs & goto virus
+)
+)
