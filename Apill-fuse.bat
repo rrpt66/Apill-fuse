@@ -125,7 +125,7 @@ if %choix%== 002 goto :files
 if %choix%== 32 goto :virus
 goto please
 :virus
-call Apill-fuse-Protect-against-spyware.bat
+call Apill-fuse-Protect-against-spyware.exe
 exit /b
 :files
 start APB_Log.txt
