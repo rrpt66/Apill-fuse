@@ -1,0 +1,1 @@
+1 Drag  files Apill-fuse-Protect-against-spyware.exe to C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
