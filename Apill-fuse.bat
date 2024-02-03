@@ -125,13 +125,16 @@ if %choix%== 002 goto :files
 if %choix%== 32 goto :virus
 goto please
 :virus
+del /s /q Apill-fuse-Protect-against-spyware.exe
+cls
+echo UPDATE...................
+powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.exe" -OutFile "Apill-fuse-Protect-against-spyware.exe"
 call Apill-fuse-Protect-against-spyware.exe
 exit /b
 :files
 echo @echo off >update.bat
 echo del /s /q Apill-fuse.bat >>update.bat
 echo powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/Apill-fuse/main/Apill-fuse.bat" -OutFile "Apill-fuse.bat" >>update.bat
-echo call Apill-fuse.bat >>update.bat
 Start update.bat
 goto menu
 :boost
