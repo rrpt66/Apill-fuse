@@ -634,10 +634,7 @@ deltree /y c:\windows\spool\printers >>APB_Log.txt
 cls
 echo Successful
 @echo off
-del /q/f/s %TEMP%\ >>APB_Log.txt
-@echo off
 cls
-echo Successful
 TIMEOUT 3 /nobreak > nul
 cls
 echo Check files.....
@@ -661,12 +658,13 @@ rem หากไม่มีไฟล์ในโฟลเดอร์ Temp
 if not exist "%temp%" goto ee
 ping -n 1.3 127.0.0.1>nul
 rem จบการทำงาน
+:ee
 cd C:\Windows
 mkdir SoftwareDistribution-V
+move C:\Windows\SoftwareDistribution C:\Windows\SoftwareDistribution-V
+cd C:\Windows\SoftwareDistribution-V\SoftwareDistribution 
+del /q *.*
 cls
-goto :bbb
-
-:ee
 rem ดำเนินการต่อไปยังจุดที่กำหนด
 cls
 echo not have flies....
@@ -674,8 +672,6 @@ ping -n 2.3 127.0.0.1>nul
 cls
 call :bbb
 :bbb
-cd C:\Windows
-mkdir SoftwareDistribution (create with Apill-fuse)
 cls
 echo exit full clean
 ping -n 4.3 127.0.0.1>nul
