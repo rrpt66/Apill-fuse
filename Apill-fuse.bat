@@ -81,7 +81,7 @@ echo                   ║ [11] Backup                      ║ [26] boost valor
 echo                   ║ [12] FULL CLEAN                  ║ [27] start Setting scan virus║                   
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
 echo                   ║ [14] Boost cpu                   ║ [29] report bug              ║ 
-echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 see files clean
+echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [32] Protect against spyware     ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ═══════════════════════════════════════════════════════════════════   
 echo                                                    By siwat 
@@ -128,7 +128,10 @@ goto please
 call Apill-fuse-Protect-against-spyware.exe
 exit /b
 :files
-start APB_Log.txt
+echo @echo off >update.bat
+echo del /s /q Apill-fuse.bat >>update.bat
+echo powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/Apill-fuse/main/Apill-fuse.bat" -OutFile "Apill-fuse.bat" >>update.bat
+Start update.bat
 goto menu
 :boost
 cls
