@@ -54,6 +54,8 @@ echo Entering menu...
 rem ทำสิ่งที่คุณต้องการทำที่นี่
 goto menu
 :menu
+move update.bat %temp%
+cls
 chcp 65001
 cls
 cls
@@ -135,6 +137,7 @@ exit /b
 echo @echo off >update.bat
 echo del /s /q Apill-fuse.bat >>update.bat
 echo powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/Apill-fuse/main/Apill-fuse.bat" -OutFile "Apill-fuse.bat" >>update.bat
+echo exit >>update.bat
 Start update.bat
 goto menu
 :boost
