@@ -2224,7 +2224,14 @@ echo                                ░░███╔═╝█████╗�
 echo                                ██╔══╝░░██╔══╝░░██╔══██╗██╔══╝░░██╔══██║░██╔██╗░
 echo                                ███████╗███████╗██║░░██║███████╗██║░░██║██╔╝╚██╗
 echo                                ╚══════╝╚══════╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 >> APB_Log.txt
+powercfg -restoredefaultschemes
+powershell Invoke-WebRequest "https://cdn.discordapp.com/attachments/1145945307205611623/1145945358707470386/Batlez_Tweaks.pow" -OutFile "%temp%\Apill-power.pow"
+cls
+powercfg /d 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -import "%temp%\Apill-power.pow" 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -SETACTIVE "44444444-4444-4444-4444-444444444449" >nul 2>&1 
+powercfg /changename 44444444-4444-4444-4444-444444444449 "Turbo's Power Plan" "The Ultimate Power Plan to increase FPS, improve latency and reduce input lag." >nul 2>&1 
+del "%temp%\Apill-power.pow"
 cls
 echo                                ███████╗███████╗██████╗░███████╗░█████╗░██╗░░██╗
 echo                                ╚════██║██╔════╝██╔══██╗╚════██║██╔══██╗╚██╗██╔╝
