@@ -3825,7 +3825,7 @@ echo                   ║ [12] commingsoon              ║ [27] commingsoon  �
 echo                   ║ [13] commingsoon              ║ [28] commingsoon  ║ 
 echo                   ║ [14] commingsoon              ║ [29] commingsoon  ║ 
 echo                   ║ [15] commingsoon              ║ [30] commingsoon  ║ 002 commingsoon 
-echo                   ║  data :%random%               ║ [31] commingsoon  ║ 000 commingsoon 
+echo                   ║ [funtcion] not found          ║ [31] commingsoon  ║ 000 commingsoon 
 echo                   ║ [33] commingsoon              ║ [32] commingsoon  ║ 
 echo                   ═══════════════════════════════════════════════════════════════════   
 echo                                                    By siwat 
