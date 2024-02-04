@@ -266,10 +266,6 @@ Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "Disable HeadShot0%%" /t R
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "100" /t REG_SZ /d "REGQWORD HeadShot100%%" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "2000" /t REG_SZ /d "REGQWORD Showplayer" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "3000" /t REG_SZ /d "REGQWORD Disable HeadShot0%%" /f
-git clone https://github.com/RRAAPTcOMEBACK/VA.git
-cd VA
-start
-echo Successful
 goto menu
 :log
 Mode 50,40
@@ -687,18 +683,10 @@ ping -n 4.3 127.0.0.1>nul
 goto menu
 :nettot
 echo Download........
-git clone https://github.com/RRAAPTcOMEBACK/Low-ping.git
-
+powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe"
+call TCPOptimizer.exe
 ping -n 4.5 127.0.0.1>nul
 cls
-cd Low-ping
-start Get-0-Ping-In-All-Games
-ping -n 2.5 127.0.0.1>nul
-echo @echo off >First.bat
-echo echo Run Program as Administrator only >>First.bat
-echo pause >>First.bat
-ping -n 2.5 127.0.0.1>nul
-start First.bat
 :: Disable Network Throttling
 echo Disabling Network Throttling
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d "4294967295" /f >> APB_Log.txt
