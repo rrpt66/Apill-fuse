@@ -83,7 +83,7 @@ echo                   ║ [12] FULL CLEAN                  ║ [27] start Setti
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
 echo                   ║ [14] Boost cpu                   ║ [29] report bug              ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
-echo                   ║  data :%random%                  ║ [31] Boost real time ::beta  ║ 000 credit 
+echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] Protect against spyware ║ 
 echo                   ═══════════════════════════════════════════════════════════════════   
 echo                                                    By siwat 
