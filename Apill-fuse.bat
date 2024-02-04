@@ -130,8 +130,11 @@ goto please
 :virus
 del /s /q Apill-fuse-Protect-against-spyware.exe
 cls
+TIMEOUT 2 /nobreak > nul 
 echo UPDATE...................
-powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.exe" -OutFile "Apill-fuse-Protect-against-spyware.exe"
+echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.exe" -OutFile "Apill-fuse-Protect-against-spyware.exe" >Dowload.bat
+call Dowload.bat
+move Dowload.bat %temp%
 call Apill-fuse-Protect-against-spyware.exe
 exit /b
 :files
