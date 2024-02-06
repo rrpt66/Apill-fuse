@@ -704,8 +704,11 @@ goto menu
 :nettot
 cls
 echo Setup........
-powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe"
-TIMEOUT 3 /nobreak > nul
+echo powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe" >L.bat
+echo exit >>L.bat
+start L.bat
+TIMEOUT 7 /nobreak > nul
+move L.bat %temp%
 call TCPOptimizer.exe
 ping -n 4.5 127.0.0.1>nul
 cls
