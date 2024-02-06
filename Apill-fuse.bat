@@ -1111,8 +1111,8 @@ Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "Defaul
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_SZ /d "ffffffff" /f
 cls
 echo Setup........
-echo powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe" >L.bat
-echo TIMEOUT 6 /nobreak >>L.bat
+echo @echo off >L.bat
+echo powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe" >>L.bat
 echo exit >>L.bat
 start L.bat
 TIMEOUT 7 /nobreak > nul
