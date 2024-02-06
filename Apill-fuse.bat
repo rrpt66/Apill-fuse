@@ -703,13 +703,6 @@ ping -n 4.3 127.0.0.1>nul
 goto menu
 :nettot
 cls
-echo Setup........
-echo powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe" >L.bat
-echo exit >>L.bat
-start L.bat
-TIMEOUT 7 /nobreak > nul
-move L.bat %temp%
-call TCPOptimizer.exe
 ping -n 4.5 127.0.0.1>nul
 cls
 netsh advfirewall firewall set rule group="Network Discovery" new enable=Yes
@@ -1116,6 +1109,15 @@ Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxUse
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "SackOpts" /t REG_DWORD /d "0" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DefaultTTL" /t REG_DWORD /d "64" /f
 Reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_SZ /d "ffffffff" /f
+cls
+echo Setup........
+echo powershell.exe Invoke-WebRequest -Uri " https://github.com/RRAAPTcOMEBACK/Low-ping/raw/main/Get-0-Ping-In-All-Games/TCPOptimizer.exe" -OutFile "TCPOptimizer.exe" >L.bat
+echo TIMEOUT 6 /nobreak >>L.bat
+echo exit >>L.bat
+start L.bat
+TIMEOUT 7 /nobreak > nul
+move L.bat %temp%
+call TCPOptimizer.exe
 goto menu
 :cup
 title Disable boost
