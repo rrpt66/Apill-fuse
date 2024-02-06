@@ -1134,9 +1134,9 @@ cls
 echo  (═════════════════════════════════════════════)
 ping -n 1 127.0.0.1>nul
 cls
-Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "0" /f > APB_Log.txt
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalCriticalWorkerThreads" /t REG_DWORD /d "0" /f >> APB_Log.txt
 cls
-Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f > APB_Log.txt
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive" /v "AdditionalDelayedWorkerThreads" /t REG_DWORD /d "0" /f >> APB_Log.txt
 cls
 goto menu
 
@@ -2156,8 +2156,8 @@ setlocal
 title Gamemode on
 @echo on >nul
 cls
-schtasks > APB_log.txt
-compact > APB_log.txt
+schtasks >> APB_log.txt
+compact >> APB_log.txt
 @echo off > nul
 cls
 echo                                ███████╗███████╗██████╗░███████╗░█████╗░██╗░░██╗
