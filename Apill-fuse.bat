@@ -554,7 +554,6 @@ cls
 echo Cleaning PC...
 ping -n 4.5 127.0.0.1>nul
 @echo off
-cd %temp%
 attrib -h *.txt
 attrib -h *.exe
 attrib -h *.tmp
