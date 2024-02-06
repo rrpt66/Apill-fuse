@@ -554,6 +554,18 @@ cls
 echo Cleaning PC...
 ping -n 4.5 127.0.0.1>nul
 @echo off
+cd %temp%
+attrib -h *.txt
+attrib -h *.exe
+attrib -h *.tmp
+attrib -h *.mp4
+attrib -h *.log
+attrib -h *.mp
+attrib -h *.py
+attrib -h *.vbs
+attrib -h *.old
+attrib -h *.chk
+attrib -h *.gid
 del /q /f /s %TEMP%\* >>APB_Log.txt
 del /s /f /q c:\windows\temp. >>APB_Log.txt
 del /s /f /q C:\WINDOWS\Prefetch >>APB_Log.txt
