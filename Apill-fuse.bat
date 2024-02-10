@@ -124,7 +124,7 @@ if %choix%== 000 goto :www
 if %choix%== 001 goto :wwwr
 if %choix%== 31 goto :boost
 if %choix%== 002 goto :files
-if %choix%== 32 goto :virus
+if %choix%== 32 goto :commingsoon
 if %choix%== 33 goto :more
 goto please
 :virus
