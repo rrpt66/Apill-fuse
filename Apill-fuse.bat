@@ -100,7 +100,6 @@ if %choix%== 7 Goto :shd
 if %choix%== 8 goto :ping
 if %choix%== 9 goto :cpt
 if %choix%== 10 goto :fixed
-if %choix%== 11 goto :BACKUP
 if %choix%== 12 goto :fullclean
 if %choix%== 13 goto :power
 if %choix%== 14 goto :cpu
@@ -128,18 +127,18 @@ if %choix%== 32 goto :virus
 if %choix%== 33 goto :more
 goto please
 :virus
-del /s /q Apill-fuse-Protect-against-spyware.bat
+del /s /q Apill-fuse-Protect-against-spyware.exe
 cls
 TIMEOUT 2 /nobreak > nul 
 echo UPDATE...................
 echo @echo off >Dowload.bat
-echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.bat" -OutFile "Apill-fuse-Protect-against-spyware.bat" >>Dowload.bat
+echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.bat" -OutFile "Apill-fuse-Protect-against-spyware.exe" >>Dowload.bat
 echo exit >>Dowload.bat
 TIMEOUT 2 /nobreak > nul 
 start Dowload.bat
 TIMEOUT 7 /nobreak >nul
 move Dowload.bat %temp%
-call Apill-fuse-Protect-against-spyware.bat
+call Apill-fuse-Protect-against-spyware.exe
 exit /b
 :files
 echo @echo off >update.bat
