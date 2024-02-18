@@ -2816,7 +2816,7 @@ echo                                ╚══════╝╚═════�
 cls
 echo 1 balanced
 echo 2 High
-echo 3 ultimate
+echo 3 TurBo
 SET /p choix=" PRESS NUMBER USE  >  "
 if %choix%== 1 Goto :balanced
 if %choix%== 2 Goto :High
