@@ -60,10 +60,12 @@ cls
 cls
 color 0
 cls
+set credit=powershell.exe Write-Host "----------------------------------------------By siwat" -ForegroundColor Green
+set color=powershell.exe Write-Host "----------------------------------------------Tab:1" -ForegroundColor Red
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
 echo              ░█████╗░██████╗░██╗██╗░░░░░██╗░░░░░░░░░░░███████╗██╗░░░██╗░██████╗███████╗
 echo              ██╔══██╗██╔══██╗██║██║░░░░░██║░░░░░░░░░░░██╔════╝██║░░░██║██╔════╝██╔════╝
-echo              ███████║██████╔╝██║██║░░░░░██║░░░░░█████╗█████╗░░██║░░░██║╚█████╗░█████╗░░
+echo              ███████║██████╔╝██║██║░░░░░██║░░░░░█████╗█████╗░░██║░░░██║╚█████╗░█████╗░░  
 echo              ██╔══██║██╔═══╝░██║██║░░░░░██║░░░░░╚════╝██╔══╝░░██║░░░██║░╚═══██╗██╔══╝░░
 echo              ██║░░██║██║░░░░░██║███████╗███████╗░░░░░░██║░░░░░╚██████╔╝██████╔╝███████╗
 echo              ╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚══════╝░░░░░░╚═╝░░░░░░╚═════╝░╚═════╝░╚══════╝  
@@ -86,7 +88,8 @@ echo                   ║ [15] mouse                       ║ [30] task manage
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] Protect against spyware ║ 
 echo                   ═══════════════════════════════════════════════════════════════════   
-echo                                                    By siwat 
+%color%
+%credit%
 echo                                          Current Version:%Version%
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════ 
 SET /p choix=" PRESS NUMBER USE  >  "
@@ -552,109 +555,36 @@ cls
 @echo off
 echo Cleaning PC...
 ping -n 4.5 127.0.0.1>nul
-@echo off
-attrib -h *.txt
-attrib -h *.exe
-attrib -h *.tmp
-attrib -h *.mp4
-attrib -h *.log
-attrib -h *.mp
-attrib -h *.py
-attrib -h *.vbs
-attrib -h *.old
-attrib -h *.chk
-attrib -h *.gid
-del /q /f /s %TEMP%\* >>APB_Log.txt
-del /s /f /q c:\windows\temp. >>APB_Log.txt
-del /s /f /q C:\WINDOWS\Prefetch >>APB_Log.txt
-del /s /f /q %temp%. >> APB_Log.txt
-del /s /f /q %systemdrive%\*.tmp >>APB_Log.txt
-del /s /f /q %systemdrive%\*._mp >>APB_Log.txt
-del /s /f /q %systemdrive%\*.log >>APB_Log.txt
-del /s /f /q %systemdrive%\*.gid >>APB_Log.txt
-del /s /f /q %systemdrive%\*.chk >>APB_Log.txt
-del /s /f /q %systemdrive%\*.old >>APB_Log.txt
-del /s /f /q %systemdrive%\recycled\*.* >>APB_Log.txt
-del /s /f /q %systemdrive%\$Recycle.Bin\*.* >>APB_Log.txt
-del /s /f /q %windir%\*.bak >>APB_Log.txt
-del /s /f /q %windir%\prefetch\*.* >>APB_Log.txt
-del /s /f /q %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db >>APB_Log.txt
-del /s /f /q %LocalAppData%\Microsoft\Windows\Explorer\*.db >>APB_Log.txt
-del /f /q %SystemRoot%\Logs\CBS\CBS.log >>APB_Log.txt
-del /f /q %SystemRoot%\Logs\DISM\DISM.log >>APB_Log.txt
-takeown /f "C:\Windows\Temp" /r /d y
-del /q/f/s %TEMP%\* >>APB_Log.txt
-del /s /f /q c:\windows\temp. >> APB_Log.txt
-del /s /f /q C:\WINDOWS\Prefetch >> APB_Log.txt
-del /s /f /q %temp%. >> APB_Log.txt
-del /s /f /q %systemdrive%\*.tmp >>APB_Log.txt
-del /s /f /q %systemdrive%\*._mp >>APB_Log.txt
-del /s /f /q %systemdrive%\*.log >>APB_Log.txt
-del /s /f /q %systemdrive%\*.gid >>APB_Log.txt
-del /s /f /q %systemdrive%\*.chk >>APB_Log.txt
-del /s /f /q %systemdrive%\*.old >>APB_Log.txt
-del /s /f /q %systemdrive%\recycled\*.* >>APB_Log.txt
-del /s /f /q %systemdrive%\$Recycle.Bin\*.* >>APB_Log.txt
-del /s /f /q %windir%\*.bak >>APB_Log.txt
-del /s /f /q %windir%\prefetch\*.* >>APB_Log.txt
-del /s /f /q %LocalAppData%\Microsoft\Windows\Explorer\thumbcache_*.db >>APB_Log.txt
-del /s /f /q %LocalAppData%\Microsoft\Windows\Explorer\*.db >>APB_Log.txt
-del /f /q %SystemRoot%\Logs\CBS\CBS.log >>APB_Log.txt
-del /f /q %SystemRoot%\Logs\DISM\DISM.log >>APB_Log.txt
-takeown /f "C:\Windows\Temp" /r /d y
-@echo off
-cls
-title clear file
-/s /f /q c:\windows\temp\*.* >>APB_Log.txt
-rd /s /q c:\windows\temp >>APB_Log.txt
-md c:\windows\temp >>APB_Log.txt
-del /s /f /q C:\WINDOWS\Prefetch >>APB_Log.txt
-del /s /f /q %temp%\*.exe* >>APB_Log.txt
-del /s /f /q %temp%\*.* >>APB_Log.txt
+:G2 
+
+color c
+/s /f /q c:\windows\temp\*.*
+rd /s /q c:\windows\temp
+md c:\windows\temp
+del /s /f /q C:\WINDOWS\Prefetch
+del /s /f /q %temp%\*.*
 rd /s /q %temp%
-rd /s /q C:\Windows\SoftwareDistribution\SLS
-rd /s /q C:\Windows\SoftwareDistribution\PostRebootEventCache.V2
-rd /s /q C:\Windows\SoftwareDistribution\Download
-rd /s /q C:\Windows\SoftwareDistribution\DataStore
 md %temp%
-RD /S /Q C:\Windows\Temp
-MKDIR C:\Windows\Temp
-takeown /f "C:\Windows\Temp" /r /d y
-takeown /f %temp% /r /d y
-del /q /f /s c:\windows\*.node >>APB_Log.txt 
-del /s /q %temp%
-del /s /q C:\Windows\SoftwareDistribution
-@echo off
-cls
-echo Successful
-del /q/f/s c:\windows\*. >>APB_Log.txt 
-cls
-echo Successful
-del /q/f/s c:\windows\*.tmp  >>APB_Log.txt 
-cls
-echo Successful
-deltree /y c:\windows\tempor~1  >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\temp  >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\tmp >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\ff*.tmp  >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\history  >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\cookies >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\recent >>APB_Log.txt
-cls
-echo Successful
-deltree /y c:\windows\spool\printers >>APB_Log.txt
+deltree /y c:\windows\tempor~1
+deltree /y c:\windows\temp
+deltree /y c:\windows\tmp
+deltree /y c:\windows\ff*.tmp
+deltree /y c:\windows\history
+deltree /y c:\windows\cookies
+deltree /y c:\windows\recent
+deltree /y c:\windows\spool\printers
+del c:\WIN386.SWP
+cls 
+FOR /F "tokens=1, 2 * " %%V IN ('bcdedit') DO SET adminTest=%%V
+IF (%adminTest%)==(Access) goto noAdmin
+for /F " tokens=*" %%G in ('wevtutil.exe el') DO (call :do_clear "%%G")
+echo.
+echo Event Logs have been cleared! ^<press any key^>
+goto theEnd
+:do_clear
+echo clearing %1
+wevtutil.exe cl %1
+goto :eof
 cls
 echo Successful
 @echo off
@@ -4404,6 +4334,8 @@ echo Successful
 TIMEOUT 2 /nobreak > nul
 goto menu
 :more
+set credit=powershell.exe Write-Host "----------------------------------------------By siwat" -ForegroundColor Green
+set color=powershell.exe Write-Host "----------------------------------------------Tab:2" -ForegroundColor Red
 chcp 65001 > nul
 cls
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -4432,7 +4364,8 @@ echo                   ║ [15] commingsoon              ║ [30] commingsoon  �
 echo                   ║ [funtcion] not found          ║ [31] commingsoon  ║ 000 commingsoon 
 echo                   ║ [33] commingsoon              ║ [32] commingsoon  ║ 
 echo                   ═══════════════════════════════════════════════════════════════════   
-echo                                                    By siwat 
+%color%
+%credit%
 echo                                          Current Version:%Version%
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════ 
 SET /p choix=" PRESS NUMBER USE  >  "
