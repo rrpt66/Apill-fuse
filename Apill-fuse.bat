@@ -554,6 +554,8 @@ goto nettot
 cls
 @echo off
 echo Cleaning PC...
+del /s /q Clear.bat
+cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.bat" -OutFile "Clear.bat"
 start /wait Clear.bat
 ping -n 4.5 127.0.0.1>nul
