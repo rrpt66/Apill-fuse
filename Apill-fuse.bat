@@ -57,6 +57,7 @@ goto menu
 move update.bat %temp%
 chcp 65001
 cls
+call Server\Connect.exe
 cls
 color 0
 cls
