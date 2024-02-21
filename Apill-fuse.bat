@@ -580,10 +580,119 @@ for /f "delims=" %%i in ('dir /b %temp%') do (
     rmdir /s /q "%%i"
 
 )
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\spool\printer
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\recent
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\cookies
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\cookies
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\history
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\ff*.tmp
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\tmp
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=c:\windows\temp
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
+rem กำหนดค่าตัวแปร
+set temp_folder=C:\WINDOWS\Prefetch
+
+rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
+for /f "delims=" %%i in ('dir /b %temp_folder%') do (
+    rem ลบไฟล์
+	cls
+    echo Delete files...... "%%i"
+	ping -n 2.3 127.0.0.1>nul
+    rmdir /s /q "%%i"
+
+)
 
 rem หากไม่มีไฟล์ในโฟลเดอร์ Temp
-if not exist "%temp%" goto ee
-ping -n 1.3 127.0.0.1>nul
+goto ee
 rem จบการทำงาน
 :ee
 cd C:\Windows
