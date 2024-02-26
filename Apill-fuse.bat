@@ -129,6 +129,7 @@ if %choix%== 31 goto :boost
 if %choix%== 002 goto :files
 if %choix%== 32 goto :virus
 if %choix%== 33 goto :more
+if %choix%== 11 goto :backup
 goto please
 :virus
 del /s /q Apill-fuse-Protect-against-spyware.exe
@@ -3786,6 +3787,17 @@ start https://discord.gg/g2G7PgsfCe
 goto menu
 
 :backup
+echo System Restore Point 
+rem ตั้งชื่อ System Restore Point
+set "RestorePointName=%username%"
+
+rem เรียกใช้ VBScript
+cscript "%windir%\System32\wscript.exe" "%~f0" "%RestorePointName%"
+
+rem แจ้งเตือน
+
+rem หยุดการทำงานของ Batch File
+echo reg Restore Point 
 cd C:\Users\%username%
 mkdir BACKUP
 echo backup Successful > BACKUP\backup.txt
