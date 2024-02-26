@@ -90,6 +90,7 @@ echo                   ║ [33] more                        ║ [32] Protect aga
 echo                   ═══════════════════════════════════════════════════════════════════   
 %color%
 %credit%
+echo  This Programs is safe https://www.virustotal.com/gui/file/176dc79df9c2b98d5dd4ea1aebe1d7a093b1cc99553677a2de61d0e19c82451a/detection
 echo                                          Current Version:%Version%
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════ 
 SET /p choix=" PRESS NUMBER USE  >  "
