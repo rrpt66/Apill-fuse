@@ -3788,15 +3788,8 @@ goto menu
 
 :backup
 echo System Restore Point 
-rem ตั้งชื่อ System Restore Point
-set "RestorePointName=%username%"
-
-rem เรียกใช้ VBScript
-cscript "%windir%\System32\wscript.exe" "%~f0" "%RestorePointName%"
-
-rem แจ้งเตือน
-
-rem หยุดการทำงานของ Batch File
+powershell.exe -Command "Checkpoint-Computer -Description 'Create with Apill-fuse'"
+ping -n 2 127.0.0.1>nul
 echo reg Restore Point 
 cd C:\Users\%username%
 mkdir BACKUP
