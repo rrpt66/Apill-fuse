@@ -87,10 +87,10 @@ echo                   ║ [14] Boost cpu                   ║ [29] report bug 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] Protect against spyware ║ 
-echo                   ═══════════════════════════════════════════════════════════════════   
+echo                   ═══════════════════════════════════════════════════════════════════ 
+echo  This Programs is safe https://www.virustotal.com/gui/file/176dc79df9c2b98d5dd4ea1aebe1d7a093b1cc99553677a2de61d0e19c82451a/detection  
 %color%
 %credit%
-echo  This Programs is safe https://www.virustotal.com/gui/file/176dc79df9c2b98d5dd4ea1aebe1d7a093b1cc99553677a2de61d0e19c82451a/detection
 echo                                          Current Version:%Version%
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════ 
 SET /p choix=" PRESS NUMBER USE  >  "
