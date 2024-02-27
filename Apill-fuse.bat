@@ -573,7 +573,7 @@ for /f "delims=" %%i in ('dir /b %temp%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -585,7 +585,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 
@@ -598,7 +598,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 
@@ -611,7 +611,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -623,7 +623,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -635,7 +635,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -647,7 +647,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -659,7 +659,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -671,7 +671,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 rem กำหนดค่าตัวแปร
@@ -683,7 +683,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 	cls
     echo Delete files...... "%%i"
 	ping -n 2.3 127.0.0.1>nul
-    rmdir /s /q "%%i"
+    del /s /q "%%i"
 
 )
 
