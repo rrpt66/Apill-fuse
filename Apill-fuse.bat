@@ -566,7 +566,7 @@ TIMEOUT 3 /nobreak > nul
 cls
 rem กำหนดค่าตัวแปร
 set temp_folder=%temp%
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp%') do (
     rem ลบไฟล์
@@ -591,7 +591,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\recent
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -604,7 +604,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\cookies
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -616,7 +616,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\cookies
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -628,7 +628,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\history
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -640,7 +640,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\ff*.tmp
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -652,7 +652,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\tmp
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -664,7 +664,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=c:\windows\temp
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
@@ -676,7 +676,7 @@ for /f "delims=" %%i in ('dir /b %temp_folder%') do (
 )
 rem กำหนดค่าตัวแปร
 set temp_folder=C:\WINDOWS\Prefetch
-
+del /q %temp_folder%
 rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
 for /f "delims=" %%i in ('dir /b %temp_folder%') do (
     rem ลบไฟล์
