@@ -551,9 +551,9 @@ goto nettot
 cls
 @echo off
 echo Cleaning PC...
-del /s /q Clear.bat
+del /s /q Clear.exe
 cls
-powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.bat" -OutFile "Clear.bat"
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
 start /wait Clear.bat
 ping -n 4.5 127.0.0.1>nul
 @echo off
@@ -1148,7 +1148,7 @@ cls
 goto menu
 
 :clean
-cleanmgr >>APB_Log.txt
+cleanmgr
 goto menu
 
 :cpt
