@@ -86,7 +86,7 @@ echo                   ║ [13] edit power plan             ║ [28] start Riot 
 echo                   ║ [14] Boost cpu                   ║ [29] report bug              ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
-echo                   ║ [33] more                        ║ [32] Protect against spyware ║ 
+echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ 
 echo                   ═══════════════════════════════════════════════════════════════════ 
 echo  This Programs is safe https://linkmix.co/21667481
 %color%
@@ -132,19 +132,12 @@ if %choix%== 33 goto :more
 if %choix%== 11 goto :backup
 goto please
 :virus
-del /s /q Apill-fuse-Protect-against-spyware.exe
-cls
-TIMEOUT 2 /nobreak > nul 
-echo UPDATE...................
-echo @echo off >Dowload.bat
-echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Apill-fuse-Protect-against-spyware.exe" -OutFile "Apill-fuse-Protect-against-spyware.exe" >>Dowload.bat
-echo exit >>Dowload.bat
-TIMEOUT 2 /nobreak > nul 
-start Dowload.bat
-TIMEOUT 7 /nobreak >nul
-move Dowload.bat %temp%
-call Apill-fuse-Protect-against-spyware.exe
-exit /b
+mkdir C:\UNPARK
+powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/UNPARK/raw/main/MSI.exe" -OutFile "C:\UNPARK\MSI.exe"
+powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/UNPARK/raw/main/UnparkCpu.exe" -OutFile "C:\UNPARK\UnparkCpu.exe"
+echo Run admin Only >> C:\UNPARK\README.txt
+start C:\UNPARK
+exit
 :files
 echo @echo off >update.bat
 echo del /s /q Apill-fuse.bat >>update.bat
