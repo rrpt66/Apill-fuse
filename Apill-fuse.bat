@@ -2994,7 +2994,7 @@ echo                                ██╔══╝░░██╔══╝�
 echo                                ███████╗███████╗██║░░██║███████╗██║░░██║██╔╝╚██╗
 echo                                ╚══════╝╚══════╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░
 powercfg -restoredefaultschemes
-powershell Invoke-WebRequest "https://cdn.discordapp.com/attachments/1145945307205611623/1145945358707470386/Batlez_Tweaks.pow" -OutFile "%temp%\Apill-power.pow"
+powershell Invoke-WebRequest "https://github.com/rrpt66/power-plan/raw/main/PowerPlan.pow" -OutFile "%temp%\Apill-power.pow"
 cls
 powercfg /d 44444444-4444-4444-4444-444444444449 >nul 2>&1 
 powercfg -import "%temp%\Apill-power.pow" 44444444-4444-4444-4444-444444444449 >nul 2>&1 
