@@ -2879,7 +2879,14 @@ echo                                ╚══════╝╚═════�
 echo  (═════════════════════════════════════════════)
 ping -n 1 127.0.0.1>nul
 cls
-powercfg -duplicatescheme a1841308-3541-4fab-bc81-f71556f20b4a >> APB_Log.txt
+powercfg -restoredefaultschemes
+powershell Invoke-WebRequest "https://github.com/rrpt66/power-plan/raw/main/PowerPlan2.pow" -OutFile "%temp%\Apill-power.pow"
+cls
+powercfg /d 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -import "%temp%\Apill-power.pow" 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -SETACTIVE "44444444-4444-4444-4444-444444444449" >nul 2>&1 
+powercfg /changename 44444444-4444-4444-4444-444444444449 "Turbo's Power Plan" "The TurBo Power Plan to increase FPS, improve latency and reduce input lag." >nul 2>&1 
+del "%temp%\Apill-power.pow"
 cls
 echo                                ███████╗███████╗██████╗░███████╗░█████╗░██╗░░██╗
 echo                                ╚════██║██╔════╝██╔══██╗╚════██║██╔══██╗╚██╗██╔╝
@@ -2936,7 +2943,14 @@ echo                                ░░███╔═╝█████╗�
 echo                                ██╔══╝░░██╔══╝░░██╔══██╗██╔══╝░░██╔══██║░██╔██╗░
 echo                                ███████╗███████╗██║░░██║███████╗██║░░██║██╔╝╚██╗
 echo                                ╚══════╝╚══════╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░
-powercfg -duplicatescheme 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c >> APB_Log.txt
+powercfg -restoredefaultschemes
+powershell Invoke-WebRequest "https://github.com/rrpt66/power-plan/raw/main/PowerPlan3.pow" -OutFile "%temp%\Apill-power.pow"
+cls
+powercfg /d 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -import "%temp%\Apill-power.pow" 44444444-4444-4444-4444-444444444449 >nul 2>&1 
+powercfg -SETACTIVE "44444444-4444-4444-4444-444444444449" >nul 2>&1 
+powercfg /changename 44444444-4444-4444-4444-444444444449 "Turbo's Power Plan" "The TurBo Power Plan to increase FPS, improve latency and reduce input lag." >nul 2>&1 
+del "%temp%\Apill-power.pow"
 cls
 echo                                ███████╗███████╗██████╗░███████╗░█████╗░██╗░░██╗
 echo                                ╚════██║██╔════╝██╔══██╗╚════██║██╔══██╗╚██╗██╔╝
