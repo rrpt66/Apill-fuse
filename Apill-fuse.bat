@@ -2999,7 +2999,7 @@ cls
 powercfg /d 44444444-4444-4444-4444-444444444449 >nul 2>&1 
 powercfg -import "%temp%\Apill-power.pow" 44444444-4444-4444-4444-444444444449 >nul 2>&1 
 powercfg -SETACTIVE "44444444-4444-4444-4444-444444444449" >nul 2>&1 
-powercfg /changename 44444444-4444-4444-4444-444444444449 "Turbo's Power Plan" "The Ultimate Power Plan to increase FPS, improve latency and reduce input lag." >nul 2>&1 
+powercfg /changename 44444444-4444-4444-4444-444444444449 "Turbo's Power Plan" "The TurBo Power Plan to increase FPS, improve latency and reduce input lag." >nul 2>&1 
 del "%temp%\Apill-power.pow"
 cls
 echo                                ███████╗███████╗██████╗░███████╗░█████╗░██╗░░██╗
