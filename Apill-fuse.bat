@@ -31,6 +31,8 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------   
 @echo off
 call Server\Connect.exe
+echo x=msgbox("If your computer has problems, try using function 10 or typing RESTORE IN MENU." ,0, "PC") > %temp%\RESTORE.vbs 
+start  %temp%\RESTORE.vbs 
 :menu
 
 set getcolor=color 0
@@ -86,7 +88,7 @@ echo                   ║ [13] edit power plan             ║ [28] start Riot 
 echo                   ║ [14] Boost cpu                   ║ [29] report bug              ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
-echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ 
+echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ Type RESTORE for reset This pc
 echo                   ═══════════════════════════════════════════════════════════════════ 
 echo  This Programs is safe https://linkmix.co/21667481
 %color%
@@ -130,6 +132,7 @@ if %choix%== 002 goto :files
 if %choix%== 32 goto :virus
 if %choix%== 33 goto :more
 if %choix%== 11 goto :backup
+if %choix%== RESTORE goto :reset-pc
 goto please
 :virus
 mkdir C:\UNPARK
@@ -4457,8 +4460,8 @@ echo                   ║ [11] commingsoon              ║ [26] commingsoon  �
 echo                   ║ [12] commingsoon              ║ [27] commingsoon  ║                   
 echo                   ║ [13] commingsoon              ║ [28] commingsoon  ║ 
 echo                   ║ [14] commingsoon              ║ [29] commingsoon  ║ 
-echo                   ║ [15] commingsoon              ║ [30] commingsoon  ║ 002 commingsoon 
-echo                   ║ [funtcion] not found          ║ [31] commingsoon  ║ 000 commingsoon 
+echo                   ║ [15] commingsoon              ║ [30] commingsoon  ║ 002 UPDATE
+echo                   ║ [funtcion] not found          ║ [31] commingsoon  ║ 000 credit 
 echo                   ║ [33] commingsoon              ║ [32] commingsoon  ║ 
 echo                   ═══════════════════════════════════════════════════════════════════   
 %color%
@@ -4467,4 +4470,7 @@ echo                                          Current Version:%Version%
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════ 
 SET /p choix=" PRESS NUMBER USE  >  "
 if %choix%== 1 goto :ram
+goto menu
+:reset-pc
+systemreset -factoryreset
 goto menu
