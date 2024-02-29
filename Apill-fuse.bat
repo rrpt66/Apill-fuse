@@ -559,12 +559,10 @@ cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
 start /wait Clear.exe
 ping -n 4.5 127.0.0.1>nul
-@echo off
-cls
-TIMEOUT 3 /nobreak > nul
 cls
 echo Check files.....
 TIMEOUT 3 /nobreak > nul
+del /q Clear.exe
 @echo off
 cls
 rem กำหนดค่าตัวแปร
