@@ -60,10 +60,10 @@ move update.bat %temp%
 chcp 65001
 cls
 cls
-color 0
+color 56
 cls
-set credit=powershell.exe Write-Host "----------------------------------------------By siwat" -ForegroundColor Green
-set color=powershell.exe Write-Host "----------------------------------------------Tab:1" -ForegroundColor Red
+set credit=echo "---------------------------------------------By https://github.com/rrpt66 "
+set color=echo "----------------------------------------------Tab:1" 
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
 echo              ░█████╗░██████╗░██╗██╗░░░░░██╗░░░░░░░░░░░███████╗██╗░░░██╗░██████╗███████╗
 echo              ██╔══██╗██╔══██╗██║██║░░░░░██║░░░░░░░░░░░██╔════╝██║░░░██║██╔════╝██╔════╝
@@ -560,143 +560,34 @@ powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/
 start /wait Clear.exe
 ping -n 4.5 127.0.0.1>nul
 cls
-echo Check files.....
-TIMEOUT 3 /nobreak > nul
 del /q Clear.exe
 @echo off
 cls
 rem กำหนดค่าตัวแปร
-set temp_folder=%temp%
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\spool\printer
-
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\recent
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\cookies
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\cookies
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\history
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\ff*.tmp
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\tmp
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=c:\windows\temp
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-rem กำหนดค่าตัวแปร
-set temp_folder=C:\WINDOWS\Prefetch
-del /q %temp_folder%
-rem ค้นหาไฟล์ทั้งหมดในโฟลเดอร์ Temp
-for /f "delims=" %%i in ('dir /b %temp_folder%') do (
-    rem ลบไฟล์
-	cls
-    echo Delete files...... "%%i"
-	ping -n 2.3 127.0.0.1>nul
-    del /s /q "%%i"
-
-)
-
-rem หากไม่มีไฟล์ในโฟลเดอร์ Temp
+    del /s /q %temp% > nul
+	echo Cleared 
+    del /s /q c:\windows\spool\printe > nul
+	echo Cleared 
+    del /s /q c:\windows\recent > nul
+	echo Cleared 
+	del /s /q c:\windows\cookies > nul
+	echo Cleared 
+	del /s /q c:\windows\cookies > nul
+	echo Cleared 
+	del /s /q c:\windows\history > nul
+	echo Cleared 
+	del /s /q c:\windows\ff*.tmp > nul
+	echo Cleared 
+	del /s /q c:\windows\tmp > nul
+	echo Cleared 
+	del /s /q c:\windows\temp > nul
+	echo Cleared 
+	del /s /q C:\WINDOWS\Prefetch > nul
+	echo Cleared 
+	del /s /q  C:\Windows\SoftwareDistribution > nul
 goto ee
 rem จบการทำงาน
 :ee
-cd C:\Windows
-mkdir SoftwareDistribution-V
-move C:\Windows\SoftwareDistribution C:\Windows\SoftwareDistribution-V
-cd C:\Windows\SoftwareDistribution-V\SoftwareDistribution 
-del /q *.*
 cls
 rem ดำเนินการต่อไปยังจุดที่กำหนด
 cls
