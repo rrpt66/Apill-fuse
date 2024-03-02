@@ -143,7 +143,6 @@ if %sva%== yes goto :1212
 if %sva%== no goto :menu
 :1212
 cls
-cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 echo install.........
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "c:\adw.exe"
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "c:\adw.exe"
