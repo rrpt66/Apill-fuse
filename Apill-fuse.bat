@@ -579,35 +579,43 @@ rem กำหนดค่าตัวแปร
 echo cancel Hide file all.......
 attrib -h -r -s /s /d *.* 
 cls
-    del /s /q %temp% > nul
-	echo Cleared 
-    del /s /q c:\windows\spool\printe > nul
-	echo Cleared 
-    del /s /q c:\windows\recent > nul
-	echo Cleared 
-	del /s /q c:\windows\cookies > nul
-	echo Cleared 
-	del /s /q c:\windows\cookies > nul
-	echo Cleared 
-	del /s /q c:\windows\history > nul
-	echo Cleared 
-	del /s /q c:\windows\ff*.tmp > nul
-	echo Cleared 
-	del /s /q c:\windows\tmp > nul
-	echo Cleared 
-	del /s /q c:\windows\temp > nul
-	echo Cleared 
-	del /s /q C:\WINDOWS\Prefetch > nul
-	echo Cleared 
-	del /s /q  C:\Windows\SoftwareDistribution > nul
+@echo off    
+del /s /f /q %windir%\temp\*.*    
+rd /s /q %windir%\temp    
+md %windir%\temp    
+del /s /f /q %windir%\Prefetch\*.*    
+rd /s /q %windir%\Prefetch    
+md %windir%\Prefetch    
+del /s /f /q %windir%\system32\dllcache\*.*    
+rd /s /q %windir%\system32\dllcache    
+md %windir%\system32\dllcache    
+del /s /f /q "%SysteDrive%\Temp"\*.*    
+rd /s /q "%SysteDrive%\Temp"    
+md "%SysteDrive%\Temp"    
+del /s /f /q %temp%\*.*    
+rd /s /q %temp%    
+md %temp%    
+del /s /f /q "%USERPROFILE%\Local Settings\History"\*.*    
+rd /s /q "%USERPROFILE%\Local Settings\History"    
+md "%USERPROFILE%\Local Settings\History"    
+del /s /f /q "%USERPROFILE%\Local Settings\Temporary Internet Files"\*.*    
+rd /s /q "%USERPROFILE%\Local Settings\Temporary Internet Files"    
+md "%USERPROFILE%\Local Settings\Temporary Internet Files"    
+del /s /f /q "%USERPROFILE%\Local Settings\Temp"\*.*    
+rd /s /q "%USERPROFILE%\Local Settings\Temp"    
+md "%USERPROFILE%\Local Settings\Temp"    
+del /s /f /q "%USERPROFILE%\Recent"\*.*    
+rd /s /q "%USERPROFILE%\Recent"    
+md "%USERPROFILE%\Recent"    
+del /s /f /q "%USERPROFILE%\Cookies"\*.*    
+rd /s /q "%USERPROFILE%\Cookies"    
+md "%USERPROFILE%\Cookies"
 goto ee
 rem จบการทำงาน
 :ee
 cls
 rem ดำเนินการต่อไปยังจุดที่กำหนด
 cls
-echo not have flies....
-ping -n 2.3 127.0.0.1>nul
 cls
 call :bbb
 :bbb
