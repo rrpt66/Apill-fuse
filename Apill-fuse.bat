@@ -122,7 +122,7 @@ if %choix%== 23 goto :AMD
 if %choix%== 24 goto :lowcpu
 if %choix%== 25 goto :log
 if %choix%== 26 goto :valo
-if %choix%== 27 goto :virus
+if %choix%== 27 goto :Setting
 if %choix%== 28 goto :valorantStart
 if %choix%== 29 goto :adw
 if %choix%== 30 goto :task
@@ -135,6 +135,20 @@ if %choix%== 33 goto :more
 if %choix%== 11 goto :backup
 if %choix%== RESTORE goto :reset-pc
 goto please
+:Setting
+cls
+echo run on startup ?
+set /p sva=" yes or no > "
+if %sva%== yes goto :1212
+if %sva%== no goto :menu
+:1212
+cls
+cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+echo install.........
+powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "adw.exe"
+set /p wda=" start scan virus yes or no? > "
+if %wda%== yes goto :adw
+if %wda%== no goto :menu
 :adw
 del C:\AdwCleaner\Logs\AdwCleaner[S00].txt > nul
 echo cancel Hide file all.......
