@@ -580,36 +580,136 @@ echo cancel Hide file all.......
 attrib -h -r -s /s /d *.* 
 cls
 @echo off    
-del /s /f /q %windir%\temp\*.*    
-rd /s /q %windir%\temp    
-md %windir%\temp    
-del /s /f /q %windir%\Prefetch\*.*    
-rd /s /q %windir%\Prefetch    
-md %windir%\Prefetch    
-del /s /f /q %windir%\system32\dllcache\*.*    
-rd /s /q %windir%\system32\dllcache    
-md %windir%\system32\dllcache    
-del /s /f /q "%SysteDrive%\Temp"\*.*    
-rd /s /q "%SysteDrive%\Temp"    
-md "%SysteDrive%\Temp"    
-del /s /f /q %temp%\*.*    
-rd /s /q %temp%    
-md %temp%    
-del /s /f /q "%USERPROFILE%\Local Settings\History"\*.*    
-rd /s /q "%USERPROFILE%\Local Settings\History"    
-md "%USERPROFILE%\Local Settings\History"    
-del /s /f /q "%USERPROFILE%\Local Settings\Temporary Internet Files"\*.*    
-rd /s /q "%USERPROFILE%\Local Settings\Temporary Internet Files"    
-md "%USERPROFILE%\Local Settings\Temporary Internet Files"    
-del /s /f /q "%USERPROFILE%\Local Settings\Temp"\*.*    
-rd /s /q "%USERPROFILE%\Local Settings\Temp"    
-md "%USERPROFILE%\Local Settings\Temp"    
-del /s /f /q "%USERPROFILE%\Recent"\*.*    
-rd /s /q "%USERPROFILE%\Recent"    
-md "%USERPROFILE%\Recent"    
-del /s /f /q "%USERPROFILE%\Cookies"\*.*    
-rd /s /q "%USERPROFILE%\Cookies"    
-md "%USERPROFILE%\Cookies"
+set "tempFolder=%temp%"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%windir%\temp"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%windir%\Prefetch"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%windir%\system32\dllcache"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%SysteDrive%\Temp"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%USERPROFILE%\Local Settings\History"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%USERPROFILE%\Local Settings\Temporary Internet Files"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%USERPROFILE%\Local Settings\Temp"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%USERPROFILE%\Recent"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+set "tempFolder=%USERPROFILE%\Cookies"
+
+
+echo scan Junk file or Trash file in %tempFolder%...
+ping -n 3.5 127.0.0.1>nul
+for /r "%tempFolder%" %%f in (*) do (  
+
+  echo delete: %%f
+
+ping -n 3.5 127.0.0.1>nul
+  del /f /q "%%f"
+
+)
+
 goto ee
 rem จบการทำงาน
 :ee
