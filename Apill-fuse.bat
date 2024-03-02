@@ -577,7 +577,8 @@ del /q Clear.exe
 cls
 rem กำหนดค่าตัวแปร
 echo cancel Hide file all.......
-attrib -h -r -s /s /d *.* > nul
+attrib -h -r -s /s /d *.* 
+cls
     del /s /q %temp% > nul
 	echo Cleared 
     del /s /q c:\windows\spool\printe > nul
