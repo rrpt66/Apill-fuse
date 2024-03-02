@@ -58,6 +58,7 @@ goto menu
 :menu
 move update.bat %temp%
 chcp 65001
+mode 140,40
 cls
 cls
 color 56
@@ -569,7 +570,7 @@ echo Cleaning PC...
 del /s /q Clear.exe
 cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
-start /wait Clear.exe
+Clear.exe /k
 ping -n 4.5 127.0.0.1>nul
 cls
 del /q Clear.exe
