@@ -62,8 +62,8 @@ cls
 cls
 color 56
 cls
-set credit=echo "                                             By https://github.com/rrpt66 "
-set color=echo "                                              Tab:1" 
+set credit=echo                                              By https://github.com/rrpt66 
+set color=echo                                               Tab:1 
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
 echo              ░█████╗░██████╗░██╗██╗░░░░░██╗░░░░░░░░░░░███████╗██╗░░░██╗░██████╗███████╗
 echo              ██╔══██╗██╔══██╗██║██║░░░░░██║░░░░░░░░░░░██╔════╝██║░░░██║██╔════╝██╔════╝
@@ -3885,8 +3885,8 @@ echo Successful
 TIMEOUT 2 /nobreak > nul
 goto menu
 :more
-set credit=echo "                                             By https://github.com/rrpt66 "
-set color=echo "                                              Tab:2" 
+set credit=echo                                              By https://github.com/rrpt66 
+set color=echo                                               Tab:1 
 chcp 65001 > nul
 cls
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
