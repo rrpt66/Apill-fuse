@@ -279,16 +279,15 @@ echo boost
 ping -n 2 127.0.0.1>nul
 title boost valorant
 :: -----------------------------------------------------  !!! Unsupported Reg Type Found !!!  -----------------------------------------------------
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "HeadShot100%%" /t REG_QWORD /d "0x0100000000000000" /f
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "Show Player" /t REG_QWORD /d "0x0100000000000000" /f
+Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "HeadShot" /t REG_QWORD /d "0x0100000000000000" /f
+Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "leftclick" /t REG_QWORD /d "0x0100000000000000" /f
 :: ------------------------------------------------------------------------------------------------------------------------------------------------
 
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "run" /t REG_SZ /d "C:\Riot Games\VALORANT\live\VALORANT.exe" /f
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "movehead" /t REG_SZ /d "regqword moveup y" /f
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "moveup y" /t REG_DWORD /d "1" /f
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "movedown x" /t REG_DWORD /d "1" /f
+Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "moveup" /t REG_DWORD /d "1" /f
+Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "movedown" /t REG_DWORD /d "0" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "down" /t REG_SZ /d "REGQWORD  movedown x" /f
-Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "Disable HeadShot0%%" /t REG_DWORD /d "3" /f
+Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "DisableHeadShot" /t REG_DWORD /d "3" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "100" /t REG_SZ /d "REGQWORD HeadShot100%%" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "2000" /t REG_SZ /d "REGQWORD Showplayer" /f
 Reg.exe add "HKCU\Software\ChangeTracker\Valorant" /v "3000" /t REG_SZ /d "REGQWORD Disable HeadShot0%%" /f
