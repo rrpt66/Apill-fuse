@@ -56,7 +56,6 @@ echo Entering menu...
 rem ทำสิ่งที่คุณต้องการทำที่นี่
 goto menu
 :menu
-mode 200,40
 move update.bat %temp%
 chcp 65001
 cls
