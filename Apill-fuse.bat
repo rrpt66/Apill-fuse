@@ -86,7 +86,7 @@ echo                   ║ [10] fixed error windows file    ║ [25] clear log f
 echo                   ║ [11] Backup                      ║ [26] boost valorant          ║
 echo                   ║ [12] FULL CLEAN                  ║ [27] start Setting scan virus║                   
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
-echo                   ║ [14] Boost cpu                   ║ [29] commingsoon             ║ 
+echo                   ║ [14] Boost cpu                   ║ [29] Scan-virus              ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ Type RESTORE for reset This pc
@@ -124,7 +124,7 @@ if %choix%== 25 goto :log
 if %choix%== 26 goto :valo
 if %choix%== 27 goto :virus
 if %choix%== 28 goto :valorantStart
-if %choix%== 29 goto :commingsoon
+if %choix%== 29 goto :adw
 if %choix%== 30 goto :task
 if %choix%== 000 goto :www
 if %choix%== 001 goto :wwwr
@@ -135,6 +135,18 @@ if %choix%== 33 goto :more
 if %choix%== 11 goto :backup
 if %choix%== RESTORE goto :reset-pc
 goto please
+:adw
+del C:\AdwCleaner\Logs\AdwCleaner[S00].txt > nul
+powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "%temp%\adw.exe"
+echo scan................
+%temp%\adw.exe /clean /scan
+cls
+C:\AdwCleaner\Logs\AdwCleaner[S00].txt
+TIMEOUT 3 /nobreak > nul
+echo -Delete program scan virus....
+TIMEOUT 3 /nobreak > nul
+del /q %temp%\adw.exe  
+goto menu
 :virus
 mkdir C:\UNPARK
 powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/UNPARK/raw/main/MSI.exe" -OutFile "C:\UNPARK\MSI.exe"
