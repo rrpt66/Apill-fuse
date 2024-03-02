@@ -164,6 +164,7 @@ echo @echo off >update.bat
 echo del /s /q Apill-fuse.bat >>update.bat
 echo powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/Apill-fuse/main/Apill-fuse.bat" -OutFile "Apill-fuse.bat" >>update.bat
 echo del /s /q connect.exe >>update.bat
+mkdir Server
 echo powershell.exe Invoke-WebRequest -Uri "https://github.com/rrpt66/Apill-fuse/raw/main/Server/connect.exe" -OutFile "Server\connect.exe" >>update.bat
 echo call Apill-fuse.bat >>update.bat
 Start update.bat
