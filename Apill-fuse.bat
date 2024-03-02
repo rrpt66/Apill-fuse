@@ -137,9 +137,14 @@ if %choix%== RESTORE goto :reset-pc
 goto please
 :adw
 del C:\AdwCleaner\Logs\AdwCleaner[S00].txt > nul
+cls
+echo Download Awd......
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "%temp%\adw.exe"
+echo Install Awd............
+call %temp%\adw.exe /preinstalled
+cls
 echo scan................
-%temp%\adw.exe /clean /scan
+call %temp%\adw.exe /clean /scan
 cls
 C:\AdwCleaner\Logs\AdwCleaner[S00].txt
 TIMEOUT 3 /nobreak > nul
