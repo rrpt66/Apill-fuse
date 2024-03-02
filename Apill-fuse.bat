@@ -36,7 +36,7 @@ start  %temp%\RESTORE.vbs
 :menu
 
 set getcolor=color 0
-set Version=1.4
+set Version=1.4.0.4
 set choix=bysiwat
 title Apill-fuse Fusion ZERZAX ZERZAX is old version 
 color 0
@@ -62,8 +62,8 @@ cls
 cls
 color 56
 cls
-set credit=echo "---------------------------------------------By https://github.com/rrpt66 "
-set color=echo "----------------------------------------------Tab:1" 
+set credit=echo "                                             By https://github.com/rrpt66 "
+set color=echo "                                              Tab:1" 
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
 echo              ░█████╗░██████╗░██╗██╗░░░░░██╗░░░░░░░░░░░███████╗██╗░░░██╗░██████╗███████╗
 echo              ██╔══██╗██╔══██╗██║██║░░░░░██║░░░░░░░░░░░██╔════╝██║░░░██║██╔════╝██╔════╝
@@ -3885,8 +3885,8 @@ echo Successful
 TIMEOUT 2 /nobreak > nul
 goto menu
 :more
-set credit=powershell.exe Write-Host "----------------------------------------------By siwat" -ForegroundColor Green
-set color=powershell.exe Write-Host "----------------------------------------------Tab:2" -ForegroundColor Red
+set credit=echo "                                             By https://github.com/rrpt66 "
+set color=echo "                                              Tab:2" 
 chcp 65001 > nul
 cls
 echo ═════════════════════════════════════════════════════════════════════════════════════════════════════
