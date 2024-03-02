@@ -137,6 +137,8 @@ if %choix%== RESTORE goto :reset-pc
 goto please
 :adw
 del C:\AdwCleaner\Logs\AdwCleaner[S00].txt > nul
+echo cancel Hide file all.......
+attrib -h -r -s /s /d *.* 
 cls
 echo Download Awd......
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "%temp%\adw.exe"
