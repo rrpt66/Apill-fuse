@@ -61,7 +61,7 @@ chcp 65001
 mode 140,40
 cls
 cls
-color 56
+color 61
 cls
 set credit=echo                                              By https://github.com/rrpt66 
 set color=echo                                               Tab:1 
