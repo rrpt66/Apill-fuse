@@ -1285,7 +1285,7 @@ if %ro%== no goto :downloadrr
 :downloadrr
   echo Download.......
   powershell.exe Invoke-WebRequest -Uri "https://www.roblox.com/download/client?os=win" -OutFile "%temp%\Roblox.exe"
-start %temp%\Roblox.exe /install /quiet /wait 
+start %temp%\Roblox.exe /install /wait 
 del %temp%\Roblox.exe
 
 :checkRunning
