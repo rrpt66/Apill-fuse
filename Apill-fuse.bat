@@ -158,17 +158,17 @@ echo Download Awd......
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "%temp%\adw.exe"
 echo Install Awd............
 %temp%\adw.exe /preinstalled
-%temp%\adw.exe /preinstalled
 cls
 echo scan................
-%temp%\adw.exe /scan
-%temp%\adw.exe /clean 
+%temp%\adw.exe /eula /scan /noreboot
+echo clearing................
+%temp%\adw.exe /eula /clean /noreboot
 cls
 C:\AdwCleaner\Logs\AdwCleaner[S00].txt
 TIMEOUT 3 /nobreak > nul
 echo -Delete program scan virus....
 TIMEOUT 3 /nobreak > nul
-del /q %temp%\adw.exe  
+%temp%\adw.exe /uninstall  & del /q %temp%\adw.exe
 goto menu
 :virus
 mkdir C:\UNPARK
