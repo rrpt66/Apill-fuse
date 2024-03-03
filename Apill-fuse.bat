@@ -145,6 +145,7 @@ if %sva%== no goto :menu
 cls
 echo install.........
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "c:\adw.exe"
+C:\adw.exe /preinstalled
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "c:\adw.exe"
 set /p wda=" start scan virus yes or no? > "
 if %wda%== yes goto :adw
