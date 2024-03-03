@@ -161,8 +161,8 @@ echo Install Awd............
 %temp%\adw.exe /preinstalled
 cls
 echo scan................
-%temp%\adw.exe /clean /scan
-%temp%\adw.exe /clean /scan
+%temp%\adw.exe /scan
+%temp%\adw.exe /clean 
 cls
 C:\AdwCleaner\Logs\AdwCleaner[S00].txt
 TIMEOUT 3 /nobreak > nul
