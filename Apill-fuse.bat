@@ -597,7 +597,7 @@ attrib -h -r -s /s /d *.*
 cls
 @echo off    
 set "tempFolder=%temp%"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -610,7 +610,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%windir%\temp"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -623,7 +623,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%windir%\Prefetch"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -636,7 +636,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%windir%\system32\dllcache"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -649,7 +649,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%SysteDrive%\Temp"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -661,7 +661,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%USERPROFILE%\Local Settings\History"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -674,7 +674,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%USERPROFILE%\Local Settings\Temporary Internet Files"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -687,7 +687,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%USERPROFILE%\Local Settings\Temp"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -700,7 +700,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%USERPROFILE%\Recent"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -713,7 +713,7 @@ ping -n 3.5 127.0.0.1>nul
 
 )
 set "tempFolder=%USERPROFILE%\Cookies"
-
+title clearing : %tempFolder% :
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
