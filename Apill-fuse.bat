@@ -600,59 +600,59 @@ attrib -h -r -s /s /d *.*
 cls
 @echo off    
 set "tempFolder=%temp%"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%windir%\temp"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%windir%\Prefetch"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%windir%\system32\dllcache"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%SysteDrive%\Temp"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
@@ -661,69 +661,69 @@ for /r "%tempFolder%" %%f in (*) do (
   echo delete: %%f
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
-
+title clearing : %%f :
 )
 set "tempFolder=%USERPROFILE%\Local Settings\History"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%USERPROFILE%\Local Settings\Temporary Internet Files"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%USERPROFILE%\Local Settings\Temp"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%USERPROFILE%\Recent"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
 set "tempFolder=%USERPROFILE%\Cookies"
-title clearing : %tempFolder% :
+
 
 echo scan Junk file or Trash file in %tempFolder%...
 ping -n 3.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-
+title clearing : %%f :
 ping -n 3.5 127.0.0.1>nul
   del /f /q "%%f"
 
