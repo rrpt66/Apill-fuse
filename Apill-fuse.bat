@@ -603,12 +603,12 @@ set "tempFolder=%temp%"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -616,12 +616,12 @@ set "tempFolder=%windir%\temp"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -629,12 +629,12 @@ set "tempFolder=%windir%\Prefetch"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -642,12 +642,12 @@ set "tempFolder=%windir%\system32\dllcache"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -655,11 +655,11 @@ set "tempFolder=%SysteDrive%\Temp"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 title clearing : %%f :
 )
@@ -667,12 +667,12 @@ set "tempFolder=%USERPROFILE%\Local Settings\History"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -680,12 +680,12 @@ set "tempFolder=%USERPROFILE%\Local Settings\Temporary Internet Files"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -693,12 +693,12 @@ set "tempFolder=%USERPROFILE%\Local Settings\Temp"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -706,12 +706,12 @@ set "tempFolder=%USERPROFILE%\Recent"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
 )
@@ -719,14 +719,226 @@ set "tempFolder=%USERPROFILE%\Cookies"
 
 
 echo scan Junk file or Trash file in %tempFolder%...
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
 for /r "%tempFolder%" %%f in (*) do (  
 
   echo delete: %%f
 title clearing : %%f :
-ping -n 3.5 127.0.0.1>nul
+ping -n 2.5 127.0.0.1>nul
   del /f /q "%%f"
 
+)
+cls
+
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%TEMP%"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%windir%\temp"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%SysteDrive%\Temp"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%windir%\Prefetch"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%windir%\system32\dllcache"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%USERPROFILE%\Local Settings\History"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%USERPROFILE%\Local Settings\Temporary Internet Files"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%USERPROFILE%\Recent"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%USERPROFILE%\Cookies"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+)
+rem ตั้งค่าตัวแปร temp_folder
+set "temp_folder=%USERPROFILE%\Local Settings\Temp"
+
+rem ตรวจสอบว่ามีโฟลเดอร์อยู่ใน %temp_folder% หรือไม่
+if exist "%temp_folder%\*" (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
+  rem ลบโฟลเดอร์ทั้งหมดใน %temp_folder%
+  rd /s /q "%temp_folder%\*"
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "Remove folder in %temp_folder% success"
+ping -n 2.5 127.0.0.1>nul
+) else (
+
+  rem แสดงข้อความแจ้งเตือน
+  echo "not have folder in %temp_folder%"
+ping -n 2.5 127.0.0.1>nul
 )
 
 goto ee
