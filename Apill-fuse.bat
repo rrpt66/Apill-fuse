@@ -34,7 +34,7 @@ call Server\Connect.exe
 echo x=msgbox("If your computer has problems, try using function 10 or typing RESTORE IN MENU." ,0, "PC") > %temp%\RESTORE.vbs 
 start  %temp%\RESTORE.vbs 
 :menu
-
+mkdir C:\startup
 set getcolor=color 0
 set Version=1.4.0.4
 set choix=bysiwat
