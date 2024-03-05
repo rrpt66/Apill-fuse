@@ -84,7 +84,7 @@ echo                   ║ [8] Check ping                   ║ [23] AMD boost  
 echo                   ║ [9] COMPUTER Check               ║ [24] cpu low runnig          ║
 echo                   ║ [10] fixed error windows file    ║ [25] clear log file          ║
 echo                   ║ [11] Backup                      ║ [26] boost valorant          ║
-echo                   ║ [12] FULL CLEAN                  ║ [27] start Setting scan virus║                   
+echo                   ║ [12] FULL CLEAN                  ║ [27] Setting scan virus      ║                   
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
 echo                   ║ [14] Boost cpu                   ║ [29] Scan-virus              ║ 
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
@@ -145,10 +145,10 @@ if %sva%== no goto :menu
 cls
 echo install.........
 powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcleaner?channel=release" -OutFile "C:\startup\adw.exe"
-powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan.exe" -OutFile "C:\startup\Scan.exe"
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "C:\startup\Scan-virus-and-Clear-file.exe"
 C:\startup\adw.exe /preinstalled
 
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus" /t REG_SZ /d "C:\startup\Scan.exe" /f
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
 cls
 set /p wda=" start scan virus yes or no? > "
 if %wda%== yes goto :adw
@@ -591,12 +591,12 @@ cls
 echo Cleaning PC...
 del /s /q Clear.exe
 cls
-powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "Clear.exe"
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "Scan-virus-and-Clear-file.exe"
 mkdir C:\startup
-powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Clear.exe" -OutFile "C:\startup\Clear.exe"
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "fullclean" /t REG_SZ /d "C:\startup\Clear.exe" /f
-Clear.exe /k
-ping -n 4.5 127.0.0.1>nul
+powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "C:\startup\Scan-virus-and-Clear-file.exe"
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "fullclean" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
+Scan-virus-and-Clear-file.exe /k
+cls
 cls
 del /q Clear.exe
 @echo off
