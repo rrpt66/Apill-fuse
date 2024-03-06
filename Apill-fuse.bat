@@ -3490,8 +3490,6 @@ cd C:\Users\%username%
 mkdir BACKUP
 echo backup Successful > BACKUP\backup.txt
 cd BACKUP
-echo System Restore Point 
-powershell.exe -Command "Checkpoint-Computer -Description 'Create with Apill-fuse'"
 ping -n 2 127.0.0.1>nul
 echo reg Restore Point 
 ping -n 2 127.0.0.1>nul
