@@ -30,7 +30,48 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------   
 @echo off
-call Server\Connect.exe
+Server\Connect.exe
+@echo off
+rem ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต
+ping -n 1 8.8.8.8 >nul
+if %errorlevel%== 1 (
+  echo Unable to connect to the internet! Please check your connection.
+  goto :EOF
+)
+
+rem ตรวจสอบว่า Windows Update กำลังทำงานอยู่หรือไม่
+tasklist /FI "IMAGENAME eq wuapp.exe" /FO LIST >nul
+if %errorlevel%== 1 (
+  echo Windows Update is running. Please wait until it is finished.
+  
+  goto :EOF
+)
+
+rem ตรวจหาการอัปเดต
+echo Checking for updates...
+start "" /b wmic qfe list brief /format:table
+
+rem แสดงรายการการอัปเดตที่มี
+if not "%errorlevel%" == "0" (
+  echo No new updates found -
+  set status=windows not have new update
+) else (
+  echo Found the following new updates +
+
+  rem วนลูปผ่านรายการการอัปเดต
+  for /f "delims=" %%i in ('wmic qfe list brief /format:table ^| findstr /i "hotfix"') do (
+    rem แสดงข้อมูลการอัปเดต
+  set status=windows have new update
+
+    echo ------------------------------------------------------------------------------------------------------------
+  )
+)
+
+rem แจ้งให้ผู้ใช้ทราบ
+echo Check for updates completed.
+
+rem หยุดการทำงาน
+
 echo x=msgbox("If your computer has problems, try using function 10 or typing RESTORE IN MENU." ,0, "PC") > %temp%\RESTORE.vbs 
 start  %temp%\RESTORE.vbs 
 :menu
@@ -61,7 +102,7 @@ chcp 65001
 mode 140,40
 cls
 cls
-color 61
+color fc
 cls
 set credit=echo                                              By https://github.com/rrpt66 
 set color=echo                                               Tab:1 
@@ -86,7 +127,7 @@ echo                   ║ [10] fixed error windows file    ║ [25] clear log f
 echo                   ║ [11] Backup                      ║ [26] boost valorant          ║
 echo                   ║ [12] FULL CLEAN                  ║ [27] Setting scan virus      ║                   
 echo                   ║ [13] edit power plan             ║ [28] start Riot              ║ 
-echo                   ║ [14] Boost cpu                   ║ [29] Scan-virus              ║ 
+echo                   ║ [14] Boost cpu                   ║ [29] Scan-virus              ║ Windows Update:%status%
 echo                   ║ [15] mouse                       ║ [30] task manager            ║ 002 UPDATE
 echo                   ║ [funtcion] not found             ║ [31] Boost real time ::beta  ║ 000 credit 
 echo                   ║ [33] more                        ║ [32] SUPER Ultimate Boost CPU║ Type RESTORE for reset This pc
