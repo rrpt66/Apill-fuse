@@ -32,6 +32,7 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------   
 cls
 :mouse
+chcp 65001
 title mouse
 goto Mu
 :Mu

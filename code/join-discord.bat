@@ -33,6 +33,7 @@ if '%errorlevel%' NEQ '0' (
 cls
 :discord
 title join discord
+chcp 65001
 cls
 echo join discord
 SET /p choix="yes or no  >  "

@@ -33,6 +33,7 @@ if '%errorlevel%' NEQ '0' (
 cls
 :lowp
 cls
+chcp 65001
 :NetworkTweaks
 cls
 :: -----------------------------------------------------  !!! Unsupported Reg Type Found !!!  -----------------------------------------------------

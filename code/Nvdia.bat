@@ -32,6 +32,7 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------   
 cls
 :nvidia
+chcp 65001
 title nvidia boost
 cls
 setlocal

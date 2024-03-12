@@ -34,6 +34,7 @@ cls
 @echo off
 setlocal
 title Gamemode on
+chcp 65001
 @echo on >nul
 cls
 schtasks >> APB_log.txt

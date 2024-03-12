@@ -32,5 +32,6 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------   
 cls
 :log
+chcp 65001
 Mode 50,40
 setlocal > APB_Log.txt
